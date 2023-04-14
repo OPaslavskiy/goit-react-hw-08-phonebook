@@ -9,5 +9,5 @@ export const FilterDiv = styled.div`
   border-radius: 10px;
   padding: 15px;
   width: 500px;
-  background-color: #ffffff;
+  background-color: #f7f7f7;
 `;

@@ -13,7 +13,7 @@ export const FindContactsInput = () => {
   return (
     <div>
       <h2 style={{ justifyContent: 'center', display: 'flex' }}>
-        Contact search
+        Find a contact
       </h2>
       <FilterDiv>
         <TextField

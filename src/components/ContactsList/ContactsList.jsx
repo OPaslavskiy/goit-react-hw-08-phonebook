@@ -48,7 +48,7 @@ export const ContactsList = () => {
         <h2
           style={{ justifyContent: 'center', display: 'flex', height: '35px' }}
         >
-          Сontact list
+          Your contact list
         </h2>
       )}
 

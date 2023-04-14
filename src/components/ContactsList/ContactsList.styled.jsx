@@ -5,7 +5,7 @@ export const List = styled.ul`
   flex-direction: column;
   gap: 15px;
   width: 650px;
-  max-height: 500px; /* обмежити висоту */
+  max-height: 650px; /* обмежити висоту */
   overflow: auto; /* додати скролл */
 
   border-radius: 10px;
@@ -26,7 +26,7 @@ export const List = styled.ul`
     background-color: #a0a0a0;
   }
 
-  background-color: #ffffff;
+  background-color: #f7f7f7;
   /* justify-content: start;
   align-items: flex-end; */
 `;

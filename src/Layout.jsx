@@ -6,5 +6,5 @@ export const Layout = styled.div`
   display: flex;
   flex-direction: column;
 
-  background-color: #cfceff;
+  background-color: #bdc3c7;
 `;

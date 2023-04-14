@@ -1,20 +1,22 @@
 import { RiContactsFill } from 'react-icons/ri';
 import Button from '@mui/material/Button';
 
-import { Header } from './AppBar.styled';
+import { Header, Logo, SignIn, LinkSignIn } from './AppBar.styled';
 
 export const AppBar = () => {
   return (
     <Header class="header">
-      <div>
-        <RiContactsFill />
-        <h1>PhoneBook</h1>
-      </div>
+      <Logo>
+        <RiContactsFill style={{ color: '#fff' }} />
+        <h1 style={{ color: '#fff' }}>PhoneBook</h1>
+      </Logo>
 
-      <div>
+      <div style={{ color: '#fff' }}>
         <Button variant="outlined">Log in</Button>
-        <p>Are you new user? Please </p>
-        <a href="/">sing in</a>
+        <SignIn>
+          <p>Are you new user? Please </p>
+          <LinkSignIn href="/">sing in</LinkSignIn>
+        </SignIn>
       </div>
     </Header>
   );
