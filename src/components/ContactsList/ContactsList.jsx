@@ -11,7 +11,7 @@ import {
 } from '../../redux/selectors';
 import { fetchContacts, deleteContact } from '../../redux/operation';
 
-import { List, Item, Btn, Name } from './ContactsList.styled';
+import { List, Item, Name } from './ContactsList.styled';
 
 import Button from '@mui/material/Button';
 

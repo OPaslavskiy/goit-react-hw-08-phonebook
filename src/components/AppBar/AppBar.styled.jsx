@@ -6,5 +6,5 @@ export const Header = styled.header`
   padding-left: 64px;
   padding-right: 64px;
   justify-content: space-between;
-  background-color: #b6b5f8;
+  background-color: #006d21;
 `;

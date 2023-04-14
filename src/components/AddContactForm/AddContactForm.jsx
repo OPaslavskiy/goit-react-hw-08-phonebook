@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { object, string } from 'yup';
+// import { object, string } from 'yup';
 import Notiflix from 'notiflix';
 
 import { addContact } from '../../redux/operation';
