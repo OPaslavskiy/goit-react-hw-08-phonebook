@@ -9,7 +9,6 @@ export const LogInSection = styled.div`
   display: flex;
   flex-direction: column;
   width: 500px;
-  align-items: center;
 `;
 
 export const NotRegistered = styled.div`

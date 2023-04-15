@@ -10,19 +10,16 @@ import { Routes, Route } from 'react-router-dom';
 
 export const App = () => {
   return (
-    <div>
+    <>
       <AppBar />
       <Layout>
         <GlobalStyle />
         <Routes>
-          <Route exact path="/" element={LogInForm} />
-          <Route exact path="register" element={SignInForm} />
-          <Route exact path="contacts" element={ContactsPage} />
+          <Route exact path="/" element={<LogInForm />} />
+          <Route exact path="/register" element={<SignInForm />} />
+          <Route exact path="/contacts" element={<ContactsPage />} />
         </Routes>
-
-        {/* <LogInForm /> */}
-        {/* <SignInForm /> */}
       </Layout>
-    </div>
+    </>
   );
 };

@@ -4,27 +4,30 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 
+import { logIn } from '../../redux/auth/auth-operations';
+
+import { useDispatch } from 'react-redux';
+
 import { LogInSection, NotRegistered, Text, Link } from './LogInForm.styled';
 
 export const LogInForm = () => {
-  const [formDataLogIn, setFormDataLogIn] = useState({
-    email: '',
-    password: '',
-  });
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = event => {
-    console.log(formDataLogIn);
+    dispatch(logIn({ email, password }));
     event.preventDefault();
-    setFormDataLogIn({
-      email: '',
-      password: '',
-    });
+    setEmail('');
+    setPassword('');
   };
 
   // відправка запиту на вхід!!!!!!!!!!!!!!!!
 
   return (
-    <div>
+    <div
+      style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}
+    >
       <h2 style={{ justifyContent: 'center', display: 'flex' }}>
         Please, log in...
       </h2>
@@ -48,10 +51,8 @@ export const LogInForm = () => {
             name="email"
             required
             fullWidth
-            value={formDataLogIn.email}
-            onChange={event =>
-              setFormDataLogIn({ ...formDataLogIn, email: event.target.value })
-            }
+            value={email}
+            onChange={event => setEmail(event.target.value)}
           />
           <TextField
             type="password"
@@ -61,13 +62,8 @@ export const LogInForm = () => {
             id="password"
             required
             fullWidth
-            value={formDataLogIn.password}
-            onChange={event =>
-              setFormDataLogIn({
-                ...formDataLogIn,
-                password: event.target.value,
-              })
-            }
+            value={password}
+            onChange={event => setPassword(event.target.value)}
           />
           <Button
             type="submit"

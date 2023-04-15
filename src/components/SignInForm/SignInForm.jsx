@@ -5,28 +5,30 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 
 import { SignInSection, Registered, Text, Link } from './SignInForm.styled';
+import { useDispatch } from 'react-redux';
+
+import { register } from '../../redux/auth/auth-operations';
 
 export const SignInForm = () => {
-  const [formDataSignIn, setFormDataSignIn] = useState({
-    login: '',
-    email: '',
-    password: '',
-  });
+  const dispatch = useDispatch();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  // const handleChange = ({ target: { login, value } }) => {};
 
   const handleSubmit = event => {
-    console.log(formDataSignIn);
+    dispatch(register({ name, email, password }));
     event.preventDefault();
-    setFormDataSignIn({
-      login: '',
-      email: '',
-      password: '',
-    });
+    setName('');
+    setEmail('');
+    setPassword('');
   };
 
-  // відправка запиту на реєстрацію!!!!!!!!!!!!!!!!
-
   return (
-    <div>
+    <div
+      style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}
+    >
       <h2 style={{ justifyContent: 'center', display: 'flex' }}>
         Please, sign up...
       </h2>
@@ -46,17 +48,12 @@ export const SignInForm = () => {
             variant="standard"
             type="login"
             label="Login"
-            id="login"
-            name="login"
+            id="name"
+            name="name"
             required
             fullWidth
-            value={formDataSignIn.login}
-            onChange={event =>
-              setFormDataSignIn({
-                ...formDataSignIn,
-                login: event.target.value,
-              })
-            }
+            value={name}
+            onChange={event => setName(event.target.value)}
           />
           <TextField
             variant="standard"
@@ -66,13 +63,8 @@ export const SignInForm = () => {
             name="email"
             required
             fullWidth
-            value={formDataSignIn.email}
-            onChange={event =>
-              setFormDataSignIn({
-                ...formDataSignIn,
-                email: event.target.value,
-              })
-            }
+            value={email}
+            onChange={event => setEmail(event.target.value)}
           />
           <TextField
             type="password"
@@ -82,13 +74,8 @@ export const SignInForm = () => {
             id="password"
             required
             fullWidth
-            value={formDataSignIn.password}
-            onChange={event =>
-              setFormDataSignIn({
-                ...formDataSignIn,
-                password: event.target.value,
-              })
-            }
+            value={password}
+            onChange={event => setPassword(event.target.value)}
           />
           <Button
             type="submit"
