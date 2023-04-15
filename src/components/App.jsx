@@ -2,12 +2,11 @@ import React from 'react';
 import { Layout } from '../Layout';
 import { GlobalStyle } from '../GlobalStyle';
 
-import { AddContactForm } from './AddContactForm/AddContactForm';
-import { ContactsList } from './ContactsList/ContactsList';
-import { FindContactsInput } from './FindContactsImput/FindContactsImput';
 import { AppBar } from './AppBar/AppBar';
-
-import { CreateDiv } from './App.styled';
+import { LogInForm } from './LogInForm/LogInForm';
+import { SignInForm } from './SignInForm/SignInForm';
+import { ContactsPage } from './ContactsPage/ContactsPage';
+import { Routes, Route } from 'react-router-dom';
 
 export const App = () => {
   return (
@@ -15,14 +14,14 @@ export const App = () => {
       <AppBar />
       <Layout>
         <GlobalStyle />
+        <Routes>
+          <Route exact path="/" element={LogInForm} />
+          <Route exact path="/register" element={SignInForm} />
+          <Route exact path="contacts" element={ContactsPage} />
+        </Routes>
 
-        <CreateDiv>
-          <div>
-            <AddContactForm />
-            <FindContactsInput />
-          </div>
-          <ContactsList />
-        </CreateDiv>
+        {/* <LogInForm /> */}
+        {/* <SignInForm /> */}
       </Layout>
     </div>
   );

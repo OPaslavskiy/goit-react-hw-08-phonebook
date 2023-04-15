@@ -6,8 +6,8 @@ export const FormSection = styled.div`
   background-color: #f7f7f7;
   border-radius: 10px;
   padding: 20px;
-  /* display: flex; */
-  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   width: 500px;
-  /* align-items: center; */
+  align-items: center;
 `;

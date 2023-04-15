@@ -15,7 +15,7 @@ export const AppBar = () => {
         <Button variant="outlined">Log in</Button>
         <SignIn>
           <p>Are you new user? Please </p>
-          <LinkSignIn href="/">sing in</LinkSignIn>
+          <LinkSignIn href="/">SIGN UP</LinkSignIn>
         </SignIn>
       </div>
     </Header>
