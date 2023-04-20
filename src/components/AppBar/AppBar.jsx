@@ -14,7 +14,7 @@ export const AppBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const name = useSelector(selectUserName);
   return (
-    <Header class="header">
+    <Header className="header">
       <Logo>
         <RiContactsFill style={{ color: '#fff' }} />
         <h1 style={{ color: '#fff' }}>PhoneBook</h1>
@@ -25,6 +25,7 @@ export const AppBar = () => {
           <div>
             <p>Hello, {name}</p>
             <Button
+              sx={{ marginTop: '5px' }}
               type="button"
               variant="outlined"
               onClick={() => dispatch(logOut())}
@@ -33,7 +34,7 @@ export const AppBar = () => {
             </Button>
           </div>
         ) : (
-          <p>Please, log in...</p>
+          <p>Please, log in or sign up...</p>
         )}
         {/* <Button variant="outlined">Log in</Button> */}
         {/* <SignIn>
