@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 
 import { LogInSection, NotRegistered, Text, Link } from './LogInForm.styled';
 
-export const LogInForm = () => {
+const LogInForm = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -80,3 +80,5 @@ export const LogInForm = () => {
     </div>
   );
 };
+
+export default LogInForm;

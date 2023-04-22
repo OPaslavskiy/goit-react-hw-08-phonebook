@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux';
 
 import { register } from '../../redux/auth/auth-operations';
 
-export const SignInForm = () => {
+const SignInForm = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -94,3 +94,5 @@ export const SignInForm = () => {
     </div>
   );
 };
+
+export default SignInForm;

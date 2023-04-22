@@ -5,7 +5,7 @@ import { ContactsList } from '../ContactsList/ContactsList';
 import { FindContactsInput } from '../FindContactsImput/FindContactsImput';
 
 import { CreateDiv } from './ContactsPage.styled';
-export const ContactsPage = () => {
+const ContactsPage = () => {
   return (
     <CreateDiv>
       <div>
@@ -16,3 +16,5 @@ export const ContactsPage = () => {
     </CreateDiv>
   );
 };
+
+export default ContactsPage;
