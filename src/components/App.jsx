@@ -31,43 +31,44 @@ export const App = () => {
       <AppBar />
 
       <GlobalStyle />
-      <Layout />
-      <Suspense fallback={<div>Loading page...</div>}>
-        <Routes>
-          <Route path="/" element={<AboutProject />} />
+      <Layout>
+        <Suspense fallback={<div>Loading page...</div>}>
+          <Routes>
+            <Route path="/" element={<AboutProject />} />
 
-          <Route
-            path="/login"
-            element={
-              <RestrictedRoute
-                redirectTo="/contacts"
-                component={<LogInForm />}
-              />
-            }
-          />
-          <Route
-            path="/register"
-            element={
-              <RestrictedRoute
-                redirectTo="/contacts"
-                component={<SignInForm />}
-              />
-            }
-          />
-          <Route
-            path="/contacts"
-            element={
-              <PrivateRoute
-                redirectTo="/contacts"
-                component={<ContactsElements />}
-              />
-            }
-          />
+            <Route
+              path="/login"
+              element={
+                <RestrictedRoute
+                  redirectTo="/contacts"
+                  component={<LogInForm />}
+                />
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <RestrictedRoute
+                  redirectTo="/contacts"
+                  component={<SignInForm />}
+                />
+              }
+            />
+            <Route
+              path="/contacts"
+              element={
+                <PrivateRoute
+                  redirectTo="/contacts"
+                  component={<ContactsElements />}
+                />
+              }
+            />
 
-          <Route path="*" element={<LogInForm />} />
-          {/* </Route> */}
-        </Routes>
-      </Suspense>
+            <Route path="*" element={<LogInForm />} />
+            {/* </Route> */}
+          </Routes>
+        </Suspense>
+      </Layout>
     </>
   );
 };

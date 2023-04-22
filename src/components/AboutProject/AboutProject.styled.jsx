@@ -6,4 +6,10 @@ export const Link = styled(NavLink)`
   font-size: 32px;
   font-weight: bold;
   line-height: 1.2;
+  margin-bottom: 20px;
+`;
+
+export const Contacts = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
