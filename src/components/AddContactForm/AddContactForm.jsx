@@ -77,7 +77,6 @@ export const AddContactForm = () => {
             fullWidth
             name="number"
             label="number"
-            // type="tel"
             id="number"
             value={formData.number}
             onChange={event =>

@@ -88,7 +88,7 @@ const SignInForm = () => {
         </Box>
         <Registered>
           <Text>Are you already registered? Please</Text>
-          <Link to="/">LOG IN</Link>
+          <Link to="/login">LOG IN</Link>
         </Registered>
       </SignInSection>
     </div>
