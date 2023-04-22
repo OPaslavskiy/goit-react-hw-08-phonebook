@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
   display: flex;
@@ -23,4 +24,10 @@ export const SignIn = styled.div`
 
 export const LinkSignIn = styled.a`
   color: #fff;
+`;
+
+export const Link = styled(NavLink)`
+  color: #fff;
+  margin-left: 4px;
+  margin-right: 4px;
 `;

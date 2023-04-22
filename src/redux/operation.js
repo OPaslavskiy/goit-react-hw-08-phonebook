@@ -35,7 +35,7 @@ export const addContact = createAsyncThunk(
     try {
       const response = await axios.post('/contacts', {
         name: values.name,
-        phone: values.phone,
+        number: values.number,
       });
       Notiflix.Notify.success(`${values.name} added to contact books`);
       return response.data;

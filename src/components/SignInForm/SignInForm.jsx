@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import { NavLink } from 'react-router-dom';
 
 import { SignInSection, Registered, Text, Link } from './SignInForm.styled';
 import { useDispatch } from 'react-redux';
@@ -88,7 +89,7 @@ export const SignInForm = () => {
         </Box>
         <Registered>
           <Text>Are you already registered? Please</Text>
-          <Link href="/">LOG IN</Link>
+          <Link to="/">LOG IN</Link>
         </Registered>
       </SignInSection>
     </div>

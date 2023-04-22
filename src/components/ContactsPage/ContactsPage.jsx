@@ -5,7 +5,6 @@ import { ContactsList } from '../ContactsList/ContactsList';
 import { FindContactsInput } from '../FindContactsImput/FindContactsImput';
 
 import { CreateDiv } from './ContactsPage.styled';
-
 export const ContactsPage = () => {
   return (
     <CreateDiv>

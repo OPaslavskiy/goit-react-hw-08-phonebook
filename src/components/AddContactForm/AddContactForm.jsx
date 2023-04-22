@@ -18,7 +18,7 @@ const phoneRegExp = /^\+?\d{1,4}[-\d\s()]*\d{1,4}$/;
 export const AddContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
+    number: '',
   });
   const error = useSelector(selectError);
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ export const AddContactForm = () => {
     event.preventDefault();
     setFormData({
       name: '',
-      phone: '',
+      number: '',
     });
 
     const isName = contacts.some(
@@ -73,13 +73,13 @@ export const AddContactForm = () => {
             variant="standard"
             required
             fullWidth
-            name="phone"
-            label="Phone"
+            name="number"
+            label="number"
             // type="tel"
-            id="phone"
-            value={formData.phone}
+            id="number"
+            value={formData.number}
             onChange={event =>
-              setFormData({ ...formData, phone: event.target.value })
+              setFormData({ ...formData, number: event.target.value })
             }
             InputProps={{ pattern: phoneRegExp }}
           />

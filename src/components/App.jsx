@@ -17,6 +17,7 @@ export const App = () => {
         <Routes>
           <Route exact path="/" element={<LogInForm />} />
           <Route exact path="/register" element={<SignInForm />} />
+
           <Route exact path="/contacts" element={<ContactsPage />} />
         </Routes>
       </Layout>

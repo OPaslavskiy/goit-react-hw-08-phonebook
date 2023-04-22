@@ -22,8 +22,6 @@ export const LogInForm = () => {
     setPassword('');
   };
 
-  // відправка запиту на вхід!!!!!!!!!!!!!!!!
-
   return (
     <div
       style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}
@@ -76,7 +74,7 @@ export const LogInForm = () => {
         </Box>
         <NotRegistered>
           <Text>Are you not registered? Well, go and register here</Text>
-          <Link href="/">SIGN UP</Link>
+          <Link to="register">SIGN UP</Link>
         </NotRegistered>
       </LogInSection>
     </div>

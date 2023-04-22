@@ -53,10 +53,10 @@ export const ContactsList = () => {
       )}
 
       <List>
-        {filterContact.map(({ name, phone, id }) => (
+        {filterContact.map(({ name, number, id }) => (
           <Item key={id}>
             <Name>{name}</Name>
-            <p>{phone}</p>
+            <p>{number}</p>
 
             <Button
               sx={{ marginLeft: 7 }}

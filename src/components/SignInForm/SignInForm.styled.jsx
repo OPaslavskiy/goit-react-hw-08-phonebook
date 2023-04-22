@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const SignInSection = styled.div`
   margin-top: 10px;
@@ -16,12 +17,12 @@ export const Registered = styled.div`
 `;
 
 export const Text = styled.p`
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: 11px;
   color: #1976d2;
 `;
 
-export const Link = styled.a`
+export const Link = styled(NavLink)`
   color: #1976d2;
   font-size: 11px;
 `;

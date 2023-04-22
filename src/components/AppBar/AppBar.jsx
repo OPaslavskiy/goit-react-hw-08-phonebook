@@ -6,8 +6,10 @@ import {
   selectUserName,
 } from '../../redux/auth/auth-selector';
 
-import { Header, Logo, SignIn, LinkSignIn } from './AppBar.styled';
+import { NavLink } from 'react-router-dom';
+import { Header, Logo, SignIn, LinkSignIn, Link } from './AppBar.styled';
 import { logOut } from 'redux/auth/auth-operations';
+import { ContactsPage } from 'components/ContactsPage/ContactsPage';
 
 export const AppBar = () => {
   const dispatch = useDispatch();
@@ -19,6 +21,8 @@ export const AppBar = () => {
         <RiContactsFill style={{ color: '#fff' }} />
         <h1 style={{ color: '#fff' }}>PhoneBook</h1>
       </Logo>
+
+      <NavLink to="contacts">111111</NavLink>
 
       <div style={{ color: '#fff' }}>
         {isLoggedIn ? (
@@ -34,7 +38,11 @@ export const AppBar = () => {
             </Button>
           </div>
         ) : (
-          <p>Please, log in or sign up...</p>
+          <p>
+            Please,
+            <Link to="/">log in</Link>or
+            <Link to="register">sign up</Link>...
+          </p>
         )}
         {/* <Button variant="outlined">Log in</Button> */}
         {/* <SignIn>
