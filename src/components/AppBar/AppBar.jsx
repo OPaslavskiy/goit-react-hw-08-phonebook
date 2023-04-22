@@ -21,8 +21,6 @@ export const AppBar = () => {
         <h1 style={{ color: '#fff' }}>PhoneBook</h1>
       </Logo>
 
-      <NavLink to="contacts">111111</NavLink>
-
       <div style={{ color: '#fff' }}>
         {isLoggedIn ? (
           <div>
