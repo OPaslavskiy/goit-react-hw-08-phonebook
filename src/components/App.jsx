@@ -18,9 +18,7 @@ const SignInForm = React.lazy(() => import('./SignInForm/SignInForm'));
 const ContactsElements = React.lazy(() =>
   import('./ContactsElements/ContactsElements')
 );
-const AboutProject = lazy(() =>
-  import('./../components/AboutProgect/AboutProgect')
-);
+const AboutProject = lazy(() => import('./AboutProject/AboutProject'));
 
 export const App = () => {
   const dispatch = useDispatch();
