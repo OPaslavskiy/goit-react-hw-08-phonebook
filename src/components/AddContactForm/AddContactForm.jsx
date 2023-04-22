@@ -76,7 +76,7 @@ export const AddContactForm = () => {
             required
             fullWidth
             name="number"
-            label="number"
+            label="Number or e-mail"
             id="number"
             value={formData.number}
             onChange={event =>
