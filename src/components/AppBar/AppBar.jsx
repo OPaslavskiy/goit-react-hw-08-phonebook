@@ -6,8 +6,7 @@ import {
   selectUserName,
 } from '../../redux/auth/auth-selector';
 
-import { NavLink } from 'react-router-dom';
-import { Header, Logo, Link } from './AppBar.styled';
+import { Header, Logo, Link, LogoLink } from './AppBar.styled';
 import { logOut } from 'redux/auth/auth-operations';
 
 export const AppBar = () => {
@@ -18,7 +17,7 @@ export const AppBar = () => {
     <Header className="header">
       <Logo>
         <RiContactsFill style={{ color: '#fff' }} />
-        <h1 style={{ color: '#fff' }}>PhoneBook</h1>
+        <LogoLink to="/">PhoneBook</LogoLink>
       </Logo>
 
       <div style={{ color: '#fff' }}>
@@ -37,15 +36,10 @@ export const AppBar = () => {
         ) : (
           <p>
             Please,
-            <Link to="/">log in</Link>or
+            <Link to="login">log in</Link>or
             <Link to="register">sign up</Link>...
           </p>
         )}
-        {/* <Button variant="outlined">Log in</Button> */}
-        {/* <SignIn>
-          <p>Are you new user? Please </p>
-          <LinkSignIn href="/">SIGN UP</LinkSignIn>
-        </SignIn> */}
       </div>
     </Header>
   );

@@ -4,8 +4,8 @@ import { AddContactForm } from '../AddContactForm/AddContactForm';
 import { ContactsList } from '../ContactsList/ContactsList';
 import { FindContactsInput } from '../FindContactsImput/FindContactsImput';
 
-import { CreateDiv } from './ContactsPage.styled';
-const ContactsPage = () => {
+import { CreateDiv } from './ContactsElements.styled';
+const ContactsElements = () => {
   return (
     <CreateDiv>
       <div>
@@ -17,4 +17,4 @@ const ContactsPage = () => {
   );
 };
 
-export default ContactsPage;
+export default ContactsElements;

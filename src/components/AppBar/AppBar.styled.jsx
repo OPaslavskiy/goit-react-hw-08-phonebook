@@ -31,3 +31,11 @@ export const Link = styled(NavLink)`
   margin-left: 4px;
   margin-right: 4px;
 `;
+
+export const LogoLink = styled(NavLink)`
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.2;
+`;

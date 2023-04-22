@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-// import { object, string } from 'yup';
-import Notiflix from 'notiflix';
-
 import { addContact } from '../../redux/operation';
 import { selectContacts, selectError } from '../../redux/selectors';
 
@@ -12,6 +9,11 @@ import { FormSection } from './AddContactForm.styled';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
+import Notiflix from 'notiflix';
+Notiflix.Notify.init({
+  width: '380px',
+  distance: '100px',
+});
 
 const phoneRegExp = /^\+?\d{1,4}[-\d\s()]*\d{1,4}$/;
 

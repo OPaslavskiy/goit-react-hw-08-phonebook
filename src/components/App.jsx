@@ -15,7 +15,12 @@ import { PrivateRoute } from './PrivatRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 const LogInForm = lazy(() => import('./LogInForm/LogInForm'));
 const SignInForm = React.lazy(() => import('./SignInForm/SignInForm'));
-const ContactsPage = React.lazy(() => import('./ContactsPage/ContactsPage'));
+const ContactsElements = React.lazy(() =>
+  import('./ContactsElements/ContactsElements')
+);
+const AboutProject = lazy(() =>
+  import('./../components/AboutProgect/AboutProgect')
+);
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -27,42 +32,44 @@ export const App = () => {
     <>
       <AppBar />
 
-      <Layout>
-        <GlobalStyle />
-        <Suspense fallback={<div>Loading page...</div>}>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <RestrictedRoute
-                  redirectTo="/contacts"
-                  component={<LogInForm />}
-                />
-              }
-            />
-            <Route
-              path="/register"
-              element={
-                <RestrictedRoute
-                  redirectTo="/register"
-                  component={<SignInForm />}
-                />
-              }
-            />
-            <Route
-              path="/contacts"
-              element={
-                <PrivateRoute
-                  redirectTo="/contacts"
-                  component={<ContactsPage />}
-                />
-              }
-            />
-            ;{/* <Route path="/contacts" element={<ContactsPage />} /> */}
-            <Route path="*" element={<LogInForm />} />
-          </Routes>
-        </Suspense>
-      </Layout>
+      <GlobalStyle />
+      <Layout />
+      <Suspense fallback={<div>Loading page...</div>}>
+        <Routes>
+          <Route path="/" element={<AboutProject />} />
+
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute
+                redirectTo="/contacts"
+                component={<LogInForm />}
+              />
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                redirectTo="/contacts"
+                component={<SignInForm />}
+              />
+            }
+          />
+          <Route
+            path="/contacts"
+            element={
+              <PrivateRoute
+                redirectTo="/contacts"
+                component={<ContactsElements />}
+              />
+            }
+          />
+
+          <Route path="*" element={<LogInForm />} />
+          {/* </Route> */}
+        </Routes>
+      </Suspense>
     </>
   );
 };
