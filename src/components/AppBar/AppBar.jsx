@@ -7,9 +7,8 @@ import {
 } from '../../redux/auth/auth-selector';
 
 import { NavLink } from 'react-router-dom';
-import { Header, Logo, SignIn, LinkSignIn, Link } from './AppBar.styled';
+import { Header, Logo, Link } from './AppBar.styled';
 import { logOut } from 'redux/auth/auth-operations';
-import { ContactsPage } from 'components/ContactsPage/ContactsPage';
 
 export const AppBar = () => {
   const dispatch = useDispatch();
